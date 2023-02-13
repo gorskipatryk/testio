@@ -50,6 +50,17 @@
                ReferencedContainer = "container:testio.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D0EF65B2299AA0B900AD7E41"
+               BuildableName = "testioAuthTests.xctest"
+               BlueprintName = "testioAuthTests"
+               ReferencedContainer = "container:testio.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
