@@ -31,6 +31,11 @@
 		D0EF67E4299AA6F300AD7E41 /* HasCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF67E3299AA6F300AD7E41 /* HasCustomView.swift */; };
 		D0EF67E6299AA6FD00AD7E41 /* testioCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EF6588299A9DC000AD7E41 /* testioCommon.framework */; };
 		D0EF67EE299AA89E00AD7E41 /* EntryPointDecider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF67ED299AA89E00AD7E41 /* EntryPointDecider.swift */; };
+		D0EF67F2299AC4B300AD7E41 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF67F1299AC4B300AD7E41 /* LogoView.swift */; };
+		D0EF67F5299AC99A00AD7E41 /* UIColor+testio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF67F4299AC99A00AD7E41 /* UIColor+testio.swift */; };
+		D0EF67F7299ACCC500AD7E41 /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF67F6299ACCC500AD7E41 /* UIView+CornerRadius.swift */; };
+		D0EF67F9299AD32500AD7E41 /* UITextField+LeftImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF67F8299AD32500AD7E41 /* UITextField+LeftImage.swift */; };
+		D0EF67FB299AD39B00AD7E41 /* IconTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF67FA299AD39B00AD7E41 /* IconTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +137,11 @@
 		D0EF65D5299AA44700AD7E41 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D0EF67E3299AA6F300AD7E41 /* HasCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasCustomView.swift; sourceTree = "<group>"; };
 		D0EF67ED299AA89E00AD7E41 /* EntryPointDecider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPointDecider.swift; sourceTree = "<group>"; };
+		D0EF67F1299AC4B300AD7E41 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		D0EF67F4299AC99A00AD7E41 /* UIColor+testio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+testio.swift"; sourceTree = "<group>"; };
+		D0EF67F6299ACCC500AD7E41 /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
+		D0EF67F8299AD32500AD7E41 /* UITextField+LeftImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+LeftImage.swift"; sourceTree = "<group>"; };
+		D0EF67FA299AD39B00AD7E41 /* IconTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +261,8 @@
 		D0EF6589299A9DC000AD7E41 /* testioCommon */ = {
 			isa = PBXGroup;
 			children = (
+				D0EF67F3299AC98F00AD7E41 /* Extensions */,
+				D0EF67EF299AC4A100AD7E41 /* Components */,
 				D0EF67E1299AA66D00AD7E41 /* Helpers */,
 				D0EF65A6299AA01100AD7E41 /* Supporting files */,
 			);
@@ -365,6 +377,33 @@
 				D0EF67ED299AA89E00AD7E41 /* EntryPointDecider.swift */,
 			);
 			path = EntryPoint;
+			sourceTree = "<group>";
+		};
+		D0EF67EF299AC4A100AD7E41 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF67F0299AC4A900AD7E41 /* Views */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D0EF67F0299AC4A900AD7E41 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF67F1299AC4B300AD7E41 /* LogoView.swift */,
+				D0EF67FA299AD39B00AD7E41 /* IconTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D0EF67F3299AC98F00AD7E41 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF67F4299AC99A00AD7E41 /* UIColor+testio.swift */,
+				D0EF67F6299ACCC500AD7E41 /* UIView+CornerRadius.swift */,
+				D0EF67F8299AD32500AD7E41 /* UITextField+LeftImage.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -631,6 +670,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0EF67E4299AA6F300AD7E41 /* HasCustomView.swift in Sources */,
+				D0EF67F7299ACCC500AD7E41 /* UIView+CornerRadius.swift in Sources */,
+				D0EF67FB299AD39B00AD7E41 /* IconTextField.swift in Sources */,
+				D0EF67F5299AC99A00AD7E41 /* UIColor+testio.swift in Sources */,
+				D0EF67F9299AD32500AD7E41 /* UITextField+LeftImage.swift in Sources */,
+				D0EF67F2299AC4B300AD7E41 /* LogoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
