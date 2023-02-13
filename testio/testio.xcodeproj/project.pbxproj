@@ -12,6 +12,11 @@
 		D0EF655B299A976400AD7E41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0EF655A299A976400AD7E41 /* Assets.xcassets */; };
 		D0EF655E299A976400AD7E41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0EF655C299A976400AD7E41 /* LaunchScreen.storyboard */; };
 		D0EF6569299A976400AD7E41 /* testioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6568299A976400AD7E41 /* testioTests.swift */; };
+		D0EF6590299A9DC100AD7E41 /* testioCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EF6588299A9DC000AD7E41 /* testioCommon.framework */; };
+		D0EF6597299A9DC100AD7E41 /* testioCommonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6596299A9DC100AD7E41 /* testioCommonTests.swift */; };
+		D0EF6598299A9DC100AD7E41 /* testioCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = D0EF658A299A9DC000AD7E41 /* testioCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0EF659B299A9DC100AD7E41 /* testioCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EF6588299A9DC000AD7E41 /* testioCommon.framework */; };
+		D0EF659C299A9DC100AD7E41 /* testioCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D0EF6588299A9DC000AD7E41 /* testioCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,7 +27,42 @@
 			remoteGlobalIDString = D0EF654D299A976200AD7E41;
 			remoteInfo = testio;
 		};
+		D0EF6591299A9DC100AD7E41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0EF6546299A976200AD7E41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0EF6587299A9DC000AD7E41;
+			remoteInfo = testioCommon;
+		};
+		D0EF6593299A9DC100AD7E41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0EF6546299A976200AD7E41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0EF654D299A976200AD7E41;
+			remoteInfo = testio;
+		};
+		D0EF6599299A9DC100AD7E41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0EF6546299A976200AD7E41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0EF6587299A9DC000AD7E41;
+			remoteInfo = testioCommon;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D0EF65A0299A9DC100AD7E41 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D0EF659C299A9DC100AD7E41 /* testioCommon.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D0EF654E299A976200AD7E41 /* testio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testio.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,6 +73,10 @@
 		D0EF655F299A976400AD7E41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0EF6564299A976400AD7E41 /* testioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0EF6568299A976400AD7E41 /* testioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testioTests.swift; sourceTree = "<group>"; };
+		D0EF6588299A9DC000AD7E41 /* testioCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = testioCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0EF658A299A9DC000AD7E41 /* testioCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testioCommon.h; sourceTree = "<group>"; };
+		D0EF658F299A9DC100AD7E41 /* testioCommonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testioCommonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0EF6596299A9DC100AD7E41 /* testioCommonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testioCommonTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0EF659B299A9DC100AD7E41 /* testioCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +92,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0EF6585299A9DC000AD7E41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0EF658C299A9DC100AD7E41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0EF6590299A9DC100AD7E41 /* testioCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +118,8 @@
 			children = (
 				D0EF6550299A976200AD7E41 /* testio */,
 				D0EF6567299A976400AD7E41 /* testioTests */,
+				D0EF6589299A9DC000AD7E41 /* testioCommon */,
+				D0EF6595299A9DC100AD7E41 /* testioCommonTests */,
 				D0EF654F299A976200AD7E41 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +129,8 @@
 			children = (
 				D0EF654E299A976200AD7E41 /* testio.app */,
 				D0EF6564299A976400AD7E41 /* testioTests.xctest */,
+				D0EF6588299A9DC000AD7E41 /* testioCommon.framework */,
+				D0EF658F299A9DC100AD7E41 /* testioCommonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,7 +171,42 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		D0EF6589299A9DC000AD7E41 /* testioCommon */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF65A6299AA01100AD7E41 /* Supporting files */,
+			);
+			path = testioCommon;
+			sourceTree = "<group>";
+		};
+		D0EF6595299A9DC100AD7E41 /* testioCommonTests */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF6596299A9DC100AD7E41 /* testioCommonTests.swift */,
+			);
+			path = testioCommonTests;
+			sourceTree = "<group>";
+		};
+		D0EF65A6299AA01100AD7E41 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF658A299A9DC000AD7E41 /* testioCommon.h */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D0EF6583299A9DC000AD7E41 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0EF6598299A9DC100AD7E41 /* testioCommon.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		D0EF654D299A976200AD7E41 /* testio */ = {
@@ -117,10 +216,12 @@
 				D0EF654A299A976200AD7E41 /* Sources */,
 				D0EF654B299A976200AD7E41 /* Frameworks */,
 				D0EF654C299A976200AD7E41 /* Resources */,
+				D0EF65A0299A9DC100AD7E41 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D0EF659A299A9DC100AD7E41 /* PBXTargetDependency */,
 			);
 			name = testio;
 			productName = testio;
@@ -145,6 +246,43 @@
 			productReference = D0EF6564299A976400AD7E41 /* testioTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D0EF6587299A9DC000AD7E41 /* testioCommon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0EF659D299A9DC100AD7E41 /* Build configuration list for PBXNativeTarget "testioCommon" */;
+			buildPhases = (
+				D0EF6583299A9DC000AD7E41 /* Headers */,
+				D0EF6584299A9DC000AD7E41 /* Sources */,
+				D0EF6585299A9DC000AD7E41 /* Frameworks */,
+				D0EF6586299A9DC000AD7E41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = testioCommon;
+			productName = testioCommon;
+			productReference = D0EF6588299A9DC000AD7E41 /* testioCommon.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D0EF658E299A9DC100AD7E41 /* testioCommonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0EF65A1299A9DC100AD7E41 /* Build configuration list for PBXNativeTarget "testioCommonTests" */;
+			buildPhases = (
+				D0EF658B299A9DC100AD7E41 /* Sources */,
+				D0EF658C299A9DC100AD7E41 /* Frameworks */,
+				D0EF658D299A9DC100AD7E41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0EF6592299A9DC100AD7E41 /* PBXTargetDependency */,
+				D0EF6594299A9DC100AD7E41 /* PBXTargetDependency */,
+			);
+			name = testioCommonTests;
+			productName = testioCommonTests;
+			productReference = D0EF658F299A9DC100AD7E41 /* testioCommonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -159,6 +297,14 @@
 						CreatedOnToolsVersion = 14.2;
 					};
 					D0EF6563299A976400AD7E41 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D0EF654D299A976200AD7E41;
+					};
+					D0EF6587299A9DC000AD7E41 = {
+						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
+					};
+					D0EF658E299A9DC100AD7E41 = {
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = D0EF654D299A976200AD7E41;
 					};
@@ -179,6 +325,8 @@
 			targets = (
 				D0EF654D299A976200AD7E41 /* testio */,
 				D0EF6563299A976400AD7E41 /* testioTests */,
+				D0EF6587299A9DC000AD7E41 /* testioCommon */,
+				D0EF658E299A9DC100AD7E41 /* testioCommonTests */,
 			);
 		};
 /* End PBXProject section */
@@ -194,6 +342,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D0EF6562299A976400AD7E41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0EF6586299A9DC000AD7E41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0EF658D299A9DC100AD7E41 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -220,6 +382,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D0EF6584299A9DC000AD7E41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0EF658B299A9DC100AD7E41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0EF6597299A9DC100AD7E41 /* testioCommonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -227,6 +404,21 @@
 			isa = PBXTargetDependency;
 			target = D0EF654D299A976200AD7E41 /* testio */;
 			targetProxy = D0EF6565299A976400AD7E41 /* PBXContainerItemProxy */;
+		};
+		D0EF6592299A9DC100AD7E41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0EF6587299A9DC000AD7E41 /* testioCommon */;
+			targetProxy = D0EF6591299A9DC100AD7E41 /* PBXContainerItemProxy */;
+		};
+		D0EF6594299A9DC100AD7E41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0EF654D299A976200AD7E41 /* testio */;
+			targetProxy = D0EF6593299A9DC100AD7E41 /* PBXContainerItemProxy */;
+		};
+		D0EF659A299A9DC100AD7E41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0EF6587299A9DC000AD7E41 /* testioCommon */;
+			targetProxy = D0EF6599299A9DC100AD7E41 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -450,6 +642,105 @@
 			};
 			name = Release;
 		};
+		D0EF659E299A9DC100AD7E41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = D355Q3YZEV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PG.testioCommon;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D0EF659F299A9DC100AD7E41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = D355Q3YZEV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PG.testioCommon;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D0EF65A2299A9DC100AD7E41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D355Q3YZEV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PG.testioCommonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/testio.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/testio";
+			};
+			name = Debug;
+		};
+		D0EF65A3299A9DC100AD7E41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D355Q3YZEV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PG.testioCommonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/testio.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/testio";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -476,6 +767,24 @@
 			buildConfigurations = (
 				D0EF657C299A976400AD7E41 /* Debug */,
 				D0EF657D299A976400AD7E41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0EF659D299A9DC100AD7E41 /* Build configuration list for PBXNativeTarget "testioCommon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0EF659E299A9DC100AD7E41 /* Debug */,
+				D0EF659F299A9DC100AD7E41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0EF65A1299A9DC100AD7E41 /* Build configuration list for PBXNativeTarget "testioCommonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0EF65A2299A9DC100AD7E41 /* Debug */,
+				D0EF65A3299A9DC100AD7E41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
