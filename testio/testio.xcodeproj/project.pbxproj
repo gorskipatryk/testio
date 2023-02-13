@@ -22,6 +22,15 @@
 		D0EF65BC299AA0B900AD7E41 /* testioAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = D0EF65AE299AA0B900AD7E41 /* testioAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0EF65BF299AA0B900AD7E41 /* testioAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EF65AC299AA0B900AD7E41 /* testioAuth.framework */; };
 		D0EF65C0299AA0B900AD7E41 /* testioAuth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D0EF65AC299AA0B900AD7E41 /* testioAuth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D0EF65CC299AA20400AD7E41 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF65CB299AA20400AD7E41 /* LoginView.swift */; };
+		D0EF65CE299AA21C00AD7E41 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF65CD299AA21C00AD7E41 /* LoginInteractor.swift */; };
+		D0EF65D0299AA22300AD7E41 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF65CF299AA22300AD7E41 /* LoginPresenter.swift */; };
+		D0EF65D2299AA22900AD7E41 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF65D1299AA22900AD7E41 /* LoginRouter.swift */; };
+		D0EF65D4299AA2CF00AD7E41 /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF65D3299AA2CF00AD7E41 /* LoginFactory.swift */; };
+		D0EF65D6299AA44700AD7E41 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF65D5299AA44700AD7E41 /* LoginViewController.swift */; };
+		D0EF67E4299AA6F300AD7E41 /* HasCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF67E3299AA6F300AD7E41 /* HasCustomView.swift */; };
+		D0EF67E6299AA6FD00AD7E41 /* testioCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EF6588299A9DC000AD7E41 /* testioCommon.framework */; };
+		D0EF67EE299AA89E00AD7E41 /* EntryPointDecider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF67ED299AA89E00AD7E41 /* EntryPointDecider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +83,13 @@
 			remoteGlobalIDString = D0EF65AB299AA0B900AD7E41;
 			remoteInfo = testioAuth;
 		};
+		D0EF67E8299AA6FD00AD7E41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0EF6546299A976200AD7E41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0EF6587299A9DC000AD7E41;
+			remoteInfo = testioCommon;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -108,6 +124,14 @@
 		D0EF65AE299AA0B900AD7E41 /* testioAuth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testioAuth.h; sourceTree = "<group>"; };
 		D0EF65B3299AA0B900AD7E41 /* testioAuthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testioAuthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0EF65BA299AA0B900AD7E41 /* testioAuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testioAuthTests.swift; sourceTree = "<group>"; };
+		D0EF65CB299AA20400AD7E41 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D0EF65CD299AA21C00AD7E41 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		D0EF65CF299AA22300AD7E41 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		D0EF65D1299AA22900AD7E41 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		D0EF65D3299AA2CF00AD7E41 /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
+		D0EF65D5299AA44700AD7E41 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D0EF67E3299AA6F300AD7E41 /* HasCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasCustomView.swift; sourceTree = "<group>"; };
+		D0EF67ED299AA89E00AD7E41 /* EntryPointDecider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPointDecider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0EF67E6299AA6FD00AD7E41 /* testioCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +195,7 @@
 				D0EF65AD299AA0B900AD7E41 /* testioAuth */,
 				D0EF65B9299AA0B900AD7E41 /* testioAuthTests */,
 				D0EF654F299A976200AD7E41 /* Products */,
+				D0EF67E5299AA6FD00AD7E41 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,7 +215,7 @@
 		D0EF6550299A976200AD7E41 /* testio */ = {
 			isa = PBXGroup;
 			children = (
-				D0EF6582299A9ACB00AD7E41 /* Application */,
+				D0EF67EB299AA88100AD7E41 /* Sources */,
 				D0EF6581299A9A7F00AD7E41 /* Resources */,
 			);
 			path = testio;
@@ -225,6 +251,7 @@
 		D0EF6589299A9DC000AD7E41 /* testioCommon */ = {
 			isa = PBXGroup;
 			children = (
+				D0EF67E1299AA66D00AD7E41 /* Helpers */,
 				D0EF65A6299AA01100AD7E41 /* Supporting files */,
 			);
 			path = testioCommon;
@@ -249,6 +276,7 @@
 		D0EF65AD299AA0B900AD7E41 /* testioAuth */ = {
 			isa = PBXGroup;
 			children = (
+				D0EF65C8299AA1E400AD7E41 /* Sources */,
 				D0EF65C7299AA0C100AD7E41 /* Supporting files */,
 			);
 			path = testioAuth;
@@ -268,6 +296,75 @@
 				D0EF65AE299AA0B900AD7E41 /* testioAuth.h */,
 			);
 			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		D0EF65C8299AA1E400AD7E41 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF65C9299AA1F200AD7E41 /* Screens */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		D0EF65C9299AA1F200AD7E41 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF65CA299AA1FA00AD7E41 /* Login */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		D0EF65CA299AA1FA00AD7E41 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF65D3299AA2CF00AD7E41 /* LoginFactory.swift */,
+				D0EF65CD299AA21C00AD7E41 /* LoginInteractor.swift */,
+				D0EF65CF299AA22300AD7E41 /* LoginPresenter.swift */,
+				D0EF65D1299AA22900AD7E41 /* LoginRouter.swift */,
+				D0EF65CB299AA20400AD7E41 /* LoginView.swift */,
+				D0EF65D5299AA44700AD7E41 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D0EF67E1299AA66D00AD7E41 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF67E2299AA6E500AD7E41 /* Protocols */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D0EF67E2299AA6E500AD7E41 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF67E3299AA6F300AD7E41 /* HasCustomView.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D0EF67E5299AA6FD00AD7E41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0EF67EB299AA88100AD7E41 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF67EC299AA89100AD7E41 /* EntryPoint */,
+				D0EF6582299A9ACB00AD7E41 /* Application */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		D0EF67EC299AA89100AD7E41 /* EntryPoint */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF67ED299AA89E00AD7E41 /* EntryPointDecider.swift */,
+			);
+			path = EntryPoint;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,6 +476,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D0EF67E9299AA6FD00AD7E41 /* PBXTargetDependency */,
 			);
 			name = testioAuth;
 			productName = testioAuth;
@@ -431,6 +529,7 @@
 					};
 					D0EF65AB299AA0B900AD7E41 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 					D0EF65B2299AA0B900AD7E41 = {
 						CreatedOnToolsVersion = 14.2;
@@ -513,6 +612,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0EF67EE299AA89E00AD7E41 /* EntryPointDecider.swift in Sources */,
 				D0EF6552299A976200AD7E41 /* AppDelegate.swift in Sources */,
 				D0EF6554299A976200AD7E41 /* SceneDelegate.swift in Sources */,
 			);
@@ -530,6 +630,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0EF67E4299AA6F300AD7E41 /* HasCustomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +646,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0EF65D6299AA44700AD7E41 /* LoginViewController.swift in Sources */,
+				D0EF65D0299AA22300AD7E41 /* LoginPresenter.swift in Sources */,
+				D0EF65CE299AA21C00AD7E41 /* LoginInteractor.swift in Sources */,
+				D0EF65D2299AA22900AD7E41 /* LoginRouter.swift in Sources */,
+				D0EF65CC299AA20400AD7E41 /* LoginView.swift in Sources */,
+				D0EF65D4299AA2CF00AD7E41 /* LoginFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +700,11 @@
 			isa = PBXTargetDependency;
 			target = D0EF65AB299AA0B900AD7E41 /* testioAuth */;
 			targetProxy = D0EF65BD299AA0B900AD7E41 /* PBXContainerItemProxy */;
+		};
+		D0EF67E9299AA6FD00AD7E41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0EF6587299A9DC000AD7E41 /* testioCommon */;
+			targetProxy = D0EF67E8299AA6FD00AD7E41 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -725,6 +837,7 @@
 		D0EF6579299A976400AD7E41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -752,6 +865,7 @@
 		D0EF657A299A976400AD7E41 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -884,6 +998,7 @@
 		D0EF65A2299A9DC100AD7E41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D355Q3YZEV;
@@ -901,6 +1016,7 @@
 		D0EF65A3299A9DC100AD7E41 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D355Q3YZEV;
@@ -918,6 +1034,7 @@
 		D0EF65C2299AA0BA00AD7E41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -928,6 +1045,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -938,6 +1056,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -948,6 +1067,7 @@
 		D0EF65C3299AA0BA00AD7E41 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -958,6 +1078,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
