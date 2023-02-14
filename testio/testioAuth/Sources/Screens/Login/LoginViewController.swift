@@ -20,6 +20,11 @@ final class LoginViewController: UIViewController, HasCustomView, LoginViewContr
         view = LoginView()
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        interactor.initialize()
+    }
+
     // MARK: - Private
 
     private let interactor: LoginInteracting

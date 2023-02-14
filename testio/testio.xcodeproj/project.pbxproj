@@ -36,6 +36,15 @@
 		D0EF67F7299ACCC500AD7E41 /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF67F6299ACCC500AD7E41 /* UIView+CornerRadius.swift */; };
 		D0EF67F9299AD32500AD7E41 /* UITextField+LeftImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF67F8299AD32500AD7E41 /* UITextField+LeftImage.swift */; };
 		D0EF67FB299AD39B00AD7E41 /* IconTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF67FA299AD39B00AD7E41 /* IconTextField.swift */; };
+		D0EF67FF299BA57B00AD7E41 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF67FE299BA57B00AD7E41 /* APIClient.swift */; };
+		D0EF6802299BA63100AD7E41 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6801299BA63100AD7E41 /* APIRequest.swift */; };
+		D0EF6804299BA8B000AD7E41 /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6803299BA8B000AD7E41 /* URLRequestBuilder.swift */; };
+		D0EF6807299BB06100AD7E41 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6806299BB06100AD7E41 /* APIConstants.swift */; };
+		D0EF6809299BB1F700AD7E41 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6808299BB1F700AD7E41 /* NetworkError.swift */; };
+		D0EF680D299BDE2400AD7E41 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF680C299BDE2400AD7E41 /* LoginService.swift */; };
+		D0EF6810299BDE8100AD7E41 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF680F299BDE8100AD7E41 /* LoginRequest.swift */; };
+		D0EF6813299BE9CF00AD7E41 /* APIToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6812299BE9CF00AD7E41 /* APIToken.swift */; };
+		D0EF6815299BE9F300AD7E41 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6814299BE9F300AD7E41 /* DataParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +151,15 @@
 		D0EF67F6299ACCC500AD7E41 /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
 		D0EF67F8299AD32500AD7E41 /* UITextField+LeftImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+LeftImage.swift"; sourceTree = "<group>"; };
 		D0EF67FA299AD39B00AD7E41 /* IconTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTextField.swift; sourceTree = "<group>"; };
+		D0EF67FE299BA57B00AD7E41 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		D0EF6801299BA63100AD7E41 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		D0EF6803299BA8B000AD7E41 /* URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
+		D0EF6806299BB06100AD7E41 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		D0EF6808299BB1F700AD7E41 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		D0EF680C299BDE2400AD7E41 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		D0EF680F299BDE8100AD7E41 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		D0EF6812299BE9CF00AD7E41 /* APIToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIToken.swift; sourceTree = "<group>"; };
+		D0EF6814299BE9F300AD7E41 /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +279,7 @@
 		D0EF6589299A9DC000AD7E41 /* testioCommon */ = {
 			isa = PBXGroup;
 			children = (
+				D0EF67FC299BA43F00AD7E41 /* Networking */,
 				D0EF67F3299AC98F00AD7E41 /* Extensions */,
 				D0EF67EF299AC4A100AD7E41 /* Components */,
 				D0EF67E1299AA66D00AD7E41 /* Helpers */,
@@ -313,6 +332,7 @@
 		D0EF65C8299AA1E400AD7E41 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				D0EF680A299BDE1300AD7E41 /* Services */,
 				D0EF65C9299AA1F200AD7E41 /* Screens */,
 			);
 			path = Sources;
@@ -404,6 +424,77 @@
 				D0EF67F8299AD32500AD7E41 /* UITextField+LeftImage.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D0EF67FC299BA43F00AD7E41 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF6811299BE9C100AD7E41 /* Model */,
+				D0EF6805299BB05700AD7E41 /* Helpers */,
+				D0EF6800299BA5CE00AD7E41 /* Request */,
+				D0EF67FD299BA57000AD7E41 /* Core */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		D0EF67FD299BA57000AD7E41 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF67FE299BA57B00AD7E41 /* APIClient.swift */,
+				D0EF6814299BE9F300AD7E41 /* DataParser.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D0EF6800299BA5CE00AD7E41 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF680E299BDE7600AD7E41 /* Login */,
+				D0EF6801299BA63100AD7E41 /* APIRequest.swift */,
+				D0EF6803299BA8B000AD7E41 /* URLRequestBuilder.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		D0EF6805299BB05700AD7E41 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF6806299BB06100AD7E41 /* APIConstants.swift */,
+				D0EF6808299BB1F700AD7E41 /* NetworkError.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D0EF680A299BDE1300AD7E41 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF680B299BDE1B00AD7E41 /* Login */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D0EF680B299BDE1B00AD7E41 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF680C299BDE2400AD7E41 /* LoginService.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D0EF680E299BDE7600AD7E41 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF680F299BDE8100AD7E41 /* LoginRequest.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D0EF6811299BE9C100AD7E41 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF6812299BE9CF00AD7E41 /* APIToken.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -670,10 +761,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0EF67E4299AA6F300AD7E41 /* HasCustomView.swift in Sources */,
+				D0EF67FF299BA57B00AD7E41 /* APIClient.swift in Sources */,
+				D0EF6804299BA8B000AD7E41 /* URLRequestBuilder.swift in Sources */,
+				D0EF6810299BDE8100AD7E41 /* LoginRequest.swift in Sources */,
+				D0EF6813299BE9CF00AD7E41 /* APIToken.swift in Sources */,
 				D0EF67F7299ACCC500AD7E41 /* UIView+CornerRadius.swift in Sources */,
 				D0EF67FB299AD39B00AD7E41 /* IconTextField.swift in Sources */,
 				D0EF67F5299AC99A00AD7E41 /* UIColor+testio.swift in Sources */,
+				D0EF6807299BB06100AD7E41 /* APIConstants.swift in Sources */,
 				D0EF67F9299AD32500AD7E41 /* UITextField+LeftImage.swift in Sources */,
+				D0EF6802299BA63100AD7E41 /* APIRequest.swift in Sources */,
+				D0EF6809299BB1F700AD7E41 /* NetworkError.swift in Sources */,
+				D0EF6815299BE9F300AD7E41 /* DataParser.swift in Sources */,
 				D0EF67F2299AC4B300AD7E41 /* LogoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -696,6 +795,7 @@
 				D0EF65D2299AA22900AD7E41 /* LoginRouter.swift in Sources */,
 				D0EF65CC299AA20400AD7E41 /* LoginView.swift in Sources */,
 				D0EF65D4299AA2CF00AD7E41 /* LoginFactory.swift in Sources */,
+				D0EF680D299BDE2400AD7E41 /* LoginService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
