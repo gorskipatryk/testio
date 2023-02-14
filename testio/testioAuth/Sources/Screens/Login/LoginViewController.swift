@@ -1,7 +1,7 @@
 import testioCommon
 import UIKit
 
-protocol LoginViewControllerProtocol: AnyObject { }
+protocol LoginViewControllerProtocol: UIViewController { }
 
 final class LoginViewController: UIViewController, HasCustomView, LoginViewControllerProtocol {
     typealias MainView = LoginView

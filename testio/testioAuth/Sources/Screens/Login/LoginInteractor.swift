@@ -1,3 +1,5 @@
+import testioCommon
+
 protocol LoginInteracting {
     func initialize()
 }

@@ -45,6 +45,7 @@
 		D0EF6810299BDE8100AD7E41 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF680F299BDE8100AD7E41 /* LoginRequest.swift */; };
 		D0EF6813299BE9CF00AD7E41 /* APIToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6812299BE9CF00AD7E41 /* APIToken.swift */; };
 		D0EF6815299BE9F300AD7E41 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6814299BE9F300AD7E41 /* DataParser.swift */; };
+		D0EF681D299BFF4900AD7E41 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF681C299BFF4900AD7E41 /* AlertPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +161,7 @@
 		D0EF680F299BDE8100AD7E41 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		D0EF6812299BE9CF00AD7E41 /* APIToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIToken.swift; sourceTree = "<group>"; };
 		D0EF6814299BE9F300AD7E41 /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		D0EF681C299BFF4900AD7E41 /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +281,7 @@
 		D0EF6589299A9DC000AD7E41 /* testioCommon */ = {
 			isa = PBXGroup;
 			children = (
+				D0EF681B299BFF3F00AD7E41 /* Presenters */,
 				D0EF67FC299BA43F00AD7E41 /* Networking */,
 				D0EF67F3299AC98F00AD7E41 /* Extensions */,
 				D0EF67EF299AC4A100AD7E41 /* Components */,
@@ -495,6 +498,14 @@
 				D0EF6812299BE9CF00AD7E41 /* APIToken.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D0EF681B299BFF3F00AD7E41 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF681C299BFF4900AD7E41 /* AlertPresenter.swift */,
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -765,6 +776,7 @@
 				D0EF6804299BA8B000AD7E41 /* URLRequestBuilder.swift in Sources */,
 				D0EF6810299BDE8100AD7E41 /* LoginRequest.swift in Sources */,
 				D0EF6813299BE9CF00AD7E41 /* APIToken.swift in Sources */,
+				D0EF681D299BFF4900AD7E41 /* AlertPresenter.swift in Sources */,
 				D0EF67F7299ACCC500AD7E41 /* UIView+CornerRadius.swift in Sources */,
 				D0EF67FB299AD39B00AD7E41 /* IconTextField.swift in Sources */,
 				D0EF67F5299AC99A00AD7E41 /* UIColor+Testio.swift in Sources */,
