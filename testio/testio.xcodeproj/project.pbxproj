@@ -46,6 +46,11 @@
 		D0EF6813299BE9CF00AD7E41 /* APIToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6812299BE9CF00AD7E41 /* APIToken.swift */; };
 		D0EF6815299BE9F300AD7E41 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6814299BE9F300AD7E41 /* DataParser.swift */; };
 		D0EF681D299BFF4900AD7E41 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF681C299BFF4900AD7E41 /* AlertPresenter.swift */; };
+		D0EF6820299C243C00AD7E41 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF681F299C243C00AD7E41 /* Keychain.swift */; };
+		D0EF6822299C244500AD7E41 /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6821299C244500AD7E41 /* KeychainStorage.swift */; };
+		D0EF6824299C24C400AD7E41 /* TokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6823299C24C400AD7E41 /* TokenStorage.swift */; };
+		D0EF6827299C253700AD7E41 /* KeychainData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6826299C253700AD7E41 /* KeychainData.swift */; };
+		D0EF6829299C293200AD7E41 /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6828299C293200AD7E41 /* KeychainError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +167,11 @@
 		D0EF6812299BE9CF00AD7E41 /* APIToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIToken.swift; sourceTree = "<group>"; };
 		D0EF6814299BE9F300AD7E41 /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
 		D0EF681C299BFF4900AD7E41 /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
+		D0EF681F299C243C00AD7E41 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		D0EF6821299C244500AD7E41 /* KeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
+		D0EF6823299C24C400AD7E41 /* TokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStorage.swift; sourceTree = "<group>"; };
+		D0EF6826299C253700AD7E41 /* KeychainData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainData.swift; sourceTree = "<group>"; };
+		D0EF6828299C293200AD7E41 /* KeychainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +291,7 @@
 		D0EF6589299A9DC000AD7E41 /* testioCommon */ = {
 			isa = PBXGroup;
 			children = (
+				D0EF681E299C242700AD7E41 /* Storage */,
 				D0EF681B299BFF3F00AD7E41 /* Presenters */,
 				D0EF67FC299BA43F00AD7E41 /* Networking */,
 				D0EF67F3299AC98F00AD7E41 /* Extensions */,
@@ -506,6 +517,26 @@
 				D0EF681C299BFF4900AD7E41 /* AlertPresenter.swift */,
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		D0EF681E299C242700AD7E41 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF6825299C252000AD7E41 /* Keychain */,
+				D0EF6821299C244500AD7E41 /* KeychainStorage.swift */,
+				D0EF6823299C24C400AD7E41 /* TokenStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		D0EF6825299C252000AD7E41 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF681F299C243C00AD7E41 /* Keychain.swift */,
+				D0EF6826299C253700AD7E41 /* KeychainData.swift */,
+				D0EF6828299C293200AD7E41 /* KeychainError.swift */,
+			);
+			path = Keychain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -773,9 +804,13 @@
 			files = (
 				D0EF67E4299AA6F300AD7E41 /* HasCustomView.swift in Sources */,
 				D0EF67FF299BA57B00AD7E41 /* APIClient.swift in Sources */,
+				D0EF6827299C253700AD7E41 /* KeychainData.swift in Sources */,
 				D0EF6804299BA8B000AD7E41 /* URLRequestBuilder.swift in Sources */,
 				D0EF6810299BDE8100AD7E41 /* LoginRequest.swift in Sources */,
+				D0EF6822299C244500AD7E41 /* KeychainStorage.swift in Sources */,
 				D0EF6813299BE9CF00AD7E41 /* APIToken.swift in Sources */,
+				D0EF6820299C243C00AD7E41 /* Keychain.swift in Sources */,
+				D0EF6824299C24C400AD7E41 /* TokenStorage.swift in Sources */,
 				D0EF681D299BFF4900AD7E41 /* AlertPresenter.swift in Sources */,
 				D0EF67F7299ACCC500AD7E41 /* UIView+CornerRadius.swift in Sources */,
 				D0EF67FB299AD39B00AD7E41 /* IconTextField.swift in Sources */,
@@ -783,6 +818,7 @@
 				D0EF6807299BB06100AD7E41 /* APIConstants.swift in Sources */,
 				D0EF67F9299AD32500AD7E41 /* UITextField+LeftImage.swift in Sources */,
 				D0EF6802299BA63100AD7E41 /* APIRequest.swift in Sources */,
+				D0EF6829299C293200AD7E41 /* KeychainError.swift in Sources */,
 				D0EF6809299BB1F700AD7E41 /* NetworkError.swift in Sources */,
 				D0EF6815299BE9F300AD7E41 /* DataParser.swift in Sources */,
 				D0EF67F2299AC4B300AD7E41 /* LogoView.swift in Sources */,

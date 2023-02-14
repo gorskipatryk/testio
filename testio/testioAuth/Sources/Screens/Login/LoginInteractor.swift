@@ -14,7 +14,20 @@ final class LoginInteractor: LoginInteracting {
 
     // MARK: - LoginInteracting
 
-    func initialize() { }
+    func initialize() {
+        Task {
+            do { try await loginService.logIn(username: "test", password: "test") }
+            catch let error as KeychainError {
+                DispatchQueue.main.async {
+                    self.presenter.presentAlert(title: error.localizedDescription, subtitle: error.failureReason)
+                }
+            } catch let error as NetworkError {
+                DispatchQueue.main.async {
+                    self.presenter.presentAlert(title: error.localizedDescription, subtitle: error.failureReason)
+                }
+            }
+        }
+    }
 
     // MARK: - Private
 
