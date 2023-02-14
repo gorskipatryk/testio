@@ -20,5 +20,4 @@ final class LoginService: LoginServiceProtocol {
     // MARK: - Private
 
     private let apiClient: APIClientProtocol
-    
 }

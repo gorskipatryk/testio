@@ -20,5 +20,5 @@ final class EntryPointDecider: EntryPointDeciding {
 
     // MARK: - Private
 
-    let loginFactory: LoginFactoring
+    private let loginFactory: LoginFactoring
 }
