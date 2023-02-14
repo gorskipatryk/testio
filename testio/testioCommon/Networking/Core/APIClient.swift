@@ -1,26 +1,31 @@
 public protocol APIClientProtocol {
-    func perform(request: any APIRequest) async throws -> Data
+    func perform<T: Codable>(request: any APIRequest) async throws -> T
 }
 
 public final class APIClient: APIClientProtocol {
     // MARK: - Initialization
 
-    public init(urlSession: URLSession = URLSession.shared, urlRequestBuilder: URLRequestBuilding = URLRequestBuilder()) {
+    public init(urlSession: URLSession = URLSession.shared,
+                urlRequestBuilder: URLRequestBuilding = URLRequestBuilder(),
+                dataParser: DataParserProtocol = DataParser()) {
         self.urlSession = urlSession
         self.urlRequestBuilder = urlRequestBuilder
+        self.dataParser = dataParser
     }
 
     // MARK: - APIClientProtocol
 
-    public func perform(request: any APIRequest) async throws -> Data {
+    public func perform<T: Codable>(request: any APIRequest) async throws -> T {
         let urlRequest = try urlRequestBuilder.build(from: request)
         let (data, response) = try await urlSession.data(for: urlRequest)
         if let error = NetworkError(from: response) { throw error }
-        return data
+        let decodedResponse: T = try dataParser.decode(data: data)
+        return decodedResponse
     }
 
     // MARK: - Private
 
     private let urlSession: URLSession
     private let urlRequestBuilder: URLRequestBuilding
+    private let dataParser: DataParserProtocol
 }

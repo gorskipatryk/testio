@@ -1,5 +1,4 @@
 public struct LoginRequest: APIRequest {
-    public typealias Response = Void
     public var requestMethod: APIRequestMethod = .POST
     public var urlPath: String = "/v1/tokens"
     public var urlParameters: [String: String]? = nil

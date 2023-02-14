@@ -7,19 +7,18 @@ protocol LoginServiceProtocol {
 final class LoginService: LoginServiceProtocol {
     // MARK: - Initialization
 
-    init(apiClient: APIClientProtocol, dataParser: DataParserProtocol = DataParser()) {
+    init(apiClient: APIClientProtocol) {
         self.apiClient = apiClient
-        self.dataParser = dataParser
     }
 
     func logIn(username: String, password: String) async throws {
         let request = LoginRequest(username: username, password: password)
-        let responseData = try await apiClient.perform(request: request)
-        let response: APIToken = try dataParser.decode(data: responseData)
+        let responseData: APIToken = try await apiClient.perform(request: request)
+        print(responseData.token)
     }
 
     // MARK: - Private
 
     private let apiClient: APIClientProtocol
-    private let dataParser: DataParserProtocol
+    
 }
