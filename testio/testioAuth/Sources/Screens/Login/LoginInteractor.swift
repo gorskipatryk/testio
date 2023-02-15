@@ -15,12 +15,11 @@ final class LoginInteractor: LoginInteracting {
     // MARK: - LoginInteracting
 
     func loginButtonDidTap(username: String?, password: String?) {
-//        guard let username, let password, !username.isEmpty, !password.isEmpty else {
-//            presenter.presentAlert(title: "Wrong credentials", subtitle: "Username or password is empty!")
-//            return
-//        }
-//        performLogin(username: username, password: password)
-        presenter.presentServerList()
+        guard let username, let password, !username.isEmpty, !password.isEmpty else {
+            presenter.presentAlert(title: "Wrong credentials", subtitle: "Username or password is empty!")
+            return
+        }
+        performLogin(username: username, password: password)
     }
 
     // MARK: - Private
@@ -32,9 +31,9 @@ final class LoginInteractor: LoginInteracting {
         Task {
             do {
                 try await loginService.logIn(username: username, password: password)
-                presenter.presentServerList()
+                await MainActor.run { presenter.presentServerList() }
             } catch let error as NetworkError {
-                self.presenter.presentAlert(title: error.errorTitle, subtitle: error.failureReason)
+                await MainActor.run { presenter.presentAlert(title: error.errorTitle, subtitle: error.failureReason) }
             }
         }
     }
