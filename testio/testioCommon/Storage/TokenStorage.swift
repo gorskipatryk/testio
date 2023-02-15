@@ -26,7 +26,7 @@ public final class TokenStorage: TokenStoring {
     public func read() -> String? {
         do {
             let tokenData = try keychainStorage.read(service: Constants.serviceKey, account: Constants.accountKey)
-            guard let tokenData = tokenData else { return nil }
+            guard let tokenData else { return nil }
             return String(data: tokenData, encoding: .utf8)
         } catch { return nil }
     }

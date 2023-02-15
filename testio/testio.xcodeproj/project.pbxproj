@@ -59,6 +59,13 @@
 		D0EF6848299D40F100AD7E41 /* testioServerBrowser.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D0EF6834299D40F000AD7E41 /* testioServerBrowser.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D0EF684F299D410A00AD7E41 /* testioCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EF6588299A9DC000AD7E41 /* testioCommon.framework */; };
 		D0EF6850299D410A00AD7E41 /* testioCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D0EF6588299A9DC000AD7E41 /* testioCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D0EF6859299D416700AD7E41 /* ServerBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6858299D416700AD7E41 /* ServerBrowserView.swift */; };
+		D0EF685B299D417000AD7E41 /* ServerBrowserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF685A299D417000AD7E41 /* ServerBrowserInteractor.swift */; };
+		D0EF685D299D417900AD7E41 /* ServerBrowserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF685C299D417900AD7E41 /* ServerBrowserPresenter.swift */; };
+		D0EF685F299D418400AD7E41 /* ServerBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF685E299D418400AD7E41 /* ServerBrowserViewController.swift */; };
+		D0EF6861299D419000AD7E41 /* ServerBrowserRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6860299D419000AD7E41 /* ServerBrowserRouting.swift */; };
+		D0EF6863299D431A00AD7E41 /* ServerBrowserFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6862299D431A00AD7E41 /* ServerBrowserFactory.swift */; };
+		D0EF6865299D446400AD7E41 /* ServerBrowserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6864299D446400AD7E41 /* ServerBrowserRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -225,6 +232,13 @@
 		D0EF6836299D40F000AD7E41 /* testioServerBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testioServerBrowser.h; sourceTree = "<group>"; };
 		D0EF683B299D40F000AD7E41 /* testioServerBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testioServerBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0EF6842299D40F100AD7E41 /* testioServerBrowserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testioServerBrowserTests.swift; sourceTree = "<group>"; };
+		D0EF6858299D416700AD7E41 /* ServerBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerBrowserView.swift; sourceTree = "<group>"; };
+		D0EF685A299D417000AD7E41 /* ServerBrowserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerBrowserInteractor.swift; sourceTree = "<group>"; };
+		D0EF685C299D417900AD7E41 /* ServerBrowserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerBrowserPresenter.swift; sourceTree = "<group>"; };
+		D0EF685E299D418400AD7E41 /* ServerBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerBrowserViewController.swift; sourceTree = "<group>"; };
+		D0EF6860299D419000AD7E41 /* ServerBrowserRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerBrowserRouting.swift; sourceTree = "<group>"; };
+		D0EF6862299D431A00AD7E41 /* ServerBrowserFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerBrowserFactory.swift; sourceTree = "<group>"; };
+		D0EF6864299D446400AD7E41 /* ServerBrowserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerBrowserRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -610,6 +624,7 @@
 			children = (
 				D0EF682B299D387D00AD7E41 /* MainRouter.swift */,
 				D0EF682D299D388400AD7E41 /* LoginRouter.swift */,
+				D0EF6864299D446400AD7E41 /* ServerBrowserRouter.swift */,
 			);
 			path = Routing;
 			sourceTree = "<group>";
@@ -617,6 +632,7 @@
 		D0EF6835299D40F000AD7E41 /* testioServerBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				D0EF6855299D414C00AD7E41 /* Sources */,
 				D0EF6854299D412900AD7E41 /* SupportingFiles */,
 			);
 			path = testioServerBrowser;
@@ -636,6 +652,35 @@
 				D0EF6836299D40F000AD7E41 /* testioServerBrowser.h */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		D0EF6855299D414C00AD7E41 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF6856299D415500AD7E41 /* Screens */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		D0EF6856299D415500AD7E41 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF6857299D415900AD7E41 /* ServerBrowser */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		D0EF6857299D415900AD7E41 /* ServerBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF6862299D431A00AD7E41 /* ServerBrowserFactory.swift */,
+				D0EF685A299D417000AD7E41 /* ServerBrowserInteractor.swift */,
+				D0EF685C299D417900AD7E41 /* ServerBrowserPresenter.swift */,
+				D0EF6860299D419000AD7E41 /* ServerBrowserRouting.swift */,
+				D0EF6858299D416700AD7E41 /* ServerBrowserView.swift */,
+				D0EF685E299D418400AD7E41 /* ServerBrowserViewController.swift */,
+			);
+			path = ServerBrowser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -856,6 +901,7 @@
 					};
 					D0EF6833299D40F000AD7E41 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 					D0EF683A299D40F000AD7E41 = {
 						CreatedOnToolsVersion = 14.2;
@@ -955,6 +1001,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0EF682C299D387D00AD7E41 /* MainRouter.swift in Sources */,
+				D0EF6865299D446400AD7E41 /* ServerBrowserRouter.swift in Sources */,
 				D0EF6552299A976200AD7E41 /* AppDelegate.swift in Sources */,
 				D0EF682E299D388400AD7E41 /* LoginRouter.swift in Sources */,
 				D0EF6554299A976200AD7E41 /* SceneDelegate.swift in Sources */,
@@ -1030,6 +1077,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0EF6861299D419000AD7E41 /* ServerBrowserRouting.swift in Sources */,
+				D0EF685B299D417000AD7E41 /* ServerBrowserInteractor.swift in Sources */,
+				D0EF6859299D416700AD7E41 /* ServerBrowserView.swift in Sources */,
+				D0EF685F299D418400AD7E41 /* ServerBrowserViewController.swift in Sources */,
+				D0EF6863299D431A00AD7E41 /* ServerBrowserFactory.swift in Sources */,
+				D0EF685D299D417900AD7E41 /* ServerBrowserPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1533,6 +1586,7 @@
 		D0EF684A299D40F200AD7E41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1554,6 +1608,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1564,6 +1619,7 @@
 		D0EF684B299D40F200AD7E41 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;

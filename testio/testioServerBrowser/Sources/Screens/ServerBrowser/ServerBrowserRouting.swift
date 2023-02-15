@@ -1,8 +1,9 @@
 import UIKit
 
-public protocol LoginRouting: AnyObject {
+public protocol ServerBrowserRouting: AnyObject {
     var navigationController: UINavigationController { get }
 
     func initialViewController() -> UIViewController
-    func navigateToServerList()
+    func presentServerBrowser()
+    func logout()
 }

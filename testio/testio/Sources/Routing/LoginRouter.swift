@@ -1,25 +1,30 @@
 import testioAuth
+import testioServerBrowser
 import UIKit
 
 final class LoginRouter: LoginRouting {
     // MARK: - Initalization
     
-    init(loginFactory: LoginFactoring = LoginFactory()) {
+    init(navigationController: UINavigationController, loginFactory: LoginFactoring = LoginFactory(), serverBrowserRouter: ServerBrowserRouting) {
+        self.navigationController = navigationController
         self.loginFactory = loginFactory
+        self.serverBrowserRouter = serverBrowserRouter
     }
 
     // MARK: - LoginRouting
 
-    func presentInitialViewController(in window: UIWindow) {
-        let loginViewController = loginFactory.makeLoginScreen(with: self)
-        window.rootViewController = loginViewController
-        currentViewController = loginViewController
+    let navigationController: UINavigationController
+
+    func initialViewController() -> UIViewController {
+        loginFactory.makeLoginScreen(with: self)
     }
 
-    func navigateToServerList() { }
+    func navigateToServerList() {
+        serverBrowserRouter.presentServerBrowser()
+    }
 
     // MARK: - Private
 
     private let loginFactory: LoginFactoring
-    private weak var currentViewController: UIViewController?
+    private let serverBrowserRouter: ServerBrowserRouting
 }

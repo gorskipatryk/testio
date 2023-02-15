@@ -1,5 +1,6 @@
 import testioAuth
 import testioCommon
+import testioServerBrowser
 import UIKit
 
 protocol MainRouterProtocol {
@@ -11,7 +12,9 @@ final class MainRouter: MainRouterProtocol {
 
     init(tokenStorage: TokenStoring = TokenStorage()) {
         self.tokenStorage = tokenStorage
-        self.loginRouter = LoginRouter()
+        self.navigationController = UINavigationController()
+        self.serverBrowserRouter = ServerBrowserRouter(navigationController: navigationController)
+        self.loginRouter = LoginRouter(navigationController: navigationController, serverBrowserRouter: serverBrowserRouter)
     }
 
     // MARK: - MainRouterProtocol
@@ -19,18 +22,22 @@ final class MainRouter: MainRouterProtocol {
     func presentInitialViewController(in window: UIWindow) {
         removeApiToken()
         if let token = tokenStorage.read(), !token.isEmpty {
-            let viewController = UIViewController()
-            viewController.view.backgroundColor = .yellow
-            window.rootViewController = viewController
+            let loginViewController = loginRouter.initialViewController()
+            let serverBrowserViewController = serverBrowserRouter.initialViewController()
+            navigationController.setViewControllers([loginViewController, serverBrowserViewController], animated: true)
         } else {
-            loginRouter.presentInitialViewController(in: window)
+            let loginViewController = loginRouter.initialViewController()
+            navigationController.setViewControllers([loginViewController], animated: true)
         }
+        window.rootViewController = navigationController
     }
 
     // MARK: - Private
 
     private let tokenStorage: TokenStoring
     private let loginRouter: LoginRouting
+    private let serverBrowserRouter: ServerBrowserRouting
+    private let navigationController: UINavigationController
 
     // TODO: - Remove
     func removeApiToken() {
