@@ -13,7 +13,6 @@
 		D0EF655E299A976400AD7E41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0EF655C299A976400AD7E41 /* LaunchScreen.storyboard */; };
 		D0EF6569299A976400AD7E41 /* testioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6568299A976400AD7E41 /* testioTests.swift */; };
 		D0EF6590299A9DC100AD7E41 /* testioCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EF6588299A9DC000AD7E41 /* testioCommon.framework */; };
-		D0EF6597299A9DC100AD7E41 /* testioCommonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6596299A9DC100AD7E41 /* testioCommonTests.swift */; };
 		D0EF6598299A9DC100AD7E41 /* testioCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = D0EF658A299A9DC000AD7E41 /* testioCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0EF659B299A9DC100AD7E41 /* testioCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EF6588299A9DC000AD7E41 /* testioCommon.framework */; };
 		D0EF659C299A9DC100AD7E41 /* testioCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D0EF6588299A9DC000AD7E41 /* testioCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -70,6 +69,10 @@
 		D0EF686B299D617A00AD7E41 /* ServerBrowserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF686A299D617A00AD7E41 /* ServerBrowserService.swift */; };
 		D0EF686E299D68CE00AD7E41 /* ServerListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF686D299D68CE00AD7E41 /* ServerListRequest.swift */; };
 		D0EF6872299D6AF000AD7E41 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6871299D6AF000AD7E41 /* Server.swift */; };
+		D0EF687D299D72EF00AD7E41 /* AlertPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF687C299D72EF00AD7E41 /* AlertPresenterSpy.swift */; };
+		D0EF6880299D738100AD7E41 /* LoginRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF687A299D72E700AD7E41 /* LoginRouterSpy.swift */; };
+		D0EF6881299D738900AD7E41 /* LoginPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6876299D72B400AD7E41 /* LoginPresenterSpec.swift */; };
+		D0EF6882299D750300AD7E41 /* AlertPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF687C299D72EF00AD7E41 /* AlertPresenterSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,7 +201,6 @@
 		D0EF6588299A9DC000AD7E41 /* testioCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = testioCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0EF658A299A9DC000AD7E41 /* testioCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testioCommon.h; sourceTree = "<group>"; };
 		D0EF658F299A9DC100AD7E41 /* testioCommonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testioCommonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0EF6596299A9DC100AD7E41 /* testioCommonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testioCommonTests.swift; sourceTree = "<group>"; };
 		D0EF65AC299AA0B900AD7E41 /* testioAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = testioAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0EF65AE299AA0B900AD7E41 /* testioAuth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testioAuth.h; sourceTree = "<group>"; };
 		D0EF65B3299AA0B900AD7E41 /* testioAuthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testioAuthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,6 +249,9 @@
 		D0EF686A299D617A00AD7E41 /* ServerBrowserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerBrowserService.swift; sourceTree = "<group>"; };
 		D0EF686D299D68CE00AD7E41 /* ServerListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListRequest.swift; sourceTree = "<group>"; };
 		D0EF6871299D6AF000AD7E41 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		D0EF6876299D72B400AD7E41 /* LoginPresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterSpec.swift; sourceTree = "<group>"; };
+		D0EF687A299D72E700AD7E41 /* LoginRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouterSpy.swift; sourceTree = "<group>"; };
+		D0EF687C299D72EF00AD7E41 /* AlertPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenterSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,7 +406,7 @@
 		D0EF6595299A9DC100AD7E41 /* testioCommonTests */ = {
 			isa = PBXGroup;
 			children = (
-				D0EF6596299A9DC100AD7E41 /* testioCommonTests.swift */,
+				D0EF6878299D72BE00AD7E41 /* TestDoubles */,
 			);
 			path = testioCommonTests;
 			sourceTree = "<group>";
@@ -426,6 +431,8 @@
 		D0EF65B9299AA0B900AD7E41 /* testioAuthTests */ = {
 			isa = PBXGroup;
 			children = (
+				D0EF687E299D734700AD7E41 /* TestDoubles */,
+				D0EF6873299D729C00AD7E41 /* Sources */,
 				D0EF65BA299AA0B900AD7E41 /* testioAuthTests.swift */,
 			);
 			path = testioAuthTests;
@@ -717,6 +724,62 @@
 				D0EF686D299D68CE00AD7E41 /* ServerListRequest.swift */,
 			);
 			path = ServerList;
+			sourceTree = "<group>";
+		};
+		D0EF6873299D729C00AD7E41 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF6874299D72A400AD7E41 /* Screens */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		D0EF6874299D72A400AD7E41 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF6875299D72AA00AD7E41 /* Login */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		D0EF6875299D72AA00AD7E41 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF6876299D72B400AD7E41 /* LoginPresenterSpec.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D0EF6878299D72BE00AD7E41 /* TestDoubles */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF6879299D72DF00AD7E41 /* Spies */,
+			);
+			path = TestDoubles;
+			sourceTree = "<group>";
+		};
+		D0EF6879299D72DF00AD7E41 /* Spies */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF687C299D72EF00AD7E41 /* AlertPresenterSpy.swift */,
+			);
+			path = Spies;
+			sourceTree = "<group>";
+		};
+		D0EF687E299D734700AD7E41 /* TestDoubles */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF687F299D737400AD7E41 /* Spies */,
+			);
+			path = TestDoubles;
+			sourceTree = "<group>";
+		};
+		D0EF687F299D737400AD7E41 /* Spies */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF687A299D72E700AD7E41 /* LoginRouterSpy.swift */,
+			);
+			path = Spies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1085,7 +1148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0EF6597299A9DC100AD7E41 /* testioCommonTests.swift in Sources */,
+				D0EF687D299D72EF00AD7E41 /* AlertPresenterSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1108,6 +1171,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0EF65BB299AA0B900AD7E41 /* testioAuthTests.swift in Sources */,
+				D0EF6881299D738900AD7E41 /* LoginPresenterSpec.swift in Sources */,
+				D0EF6882299D750300AD7E41 /* AlertPresenterSpy.swift in Sources */,
+				D0EF6880299D738100AD7E41 /* LoginRouterSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
