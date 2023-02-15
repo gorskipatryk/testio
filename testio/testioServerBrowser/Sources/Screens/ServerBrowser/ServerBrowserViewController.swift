@@ -21,11 +21,16 @@ final class ServerBrowserViewController: UIViewController, HasCustomView, Server
 
     override func viewDidLoad() {
         title = "testio"
-        let action = UIAction { _ in
-            print("button")
+        let logoutAction = UIAction { [weak self] _ in
+            self?.interactor.logoutButtonDidTap()
         }
-        let button = UIBarButtonItem(systemItem: .camera, primaryAction: action)
-        navigationItem.setRightBarButton(button, animated: true)
+        let filterAction = UIAction { _ in
+            print("Filter")
+        }
+        let logoutButton = UIBarButtonItem(title: "Logout", primaryAction: logoutAction)
+        navigationItem.setRightBarButton(logoutButton, animated: true)
+        let filterButton = UIBarButtonItem(title: "Filter", primaryAction: filterAction)
+        navigationItem.setLeftBarButton(filterButton, animated: true)
     }
 
     // MARK: - Private

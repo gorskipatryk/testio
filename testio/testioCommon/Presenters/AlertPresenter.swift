@@ -15,6 +15,6 @@ public final class AlertPresenter: AlertPresenting {
         let alert = UIAlertController(title: title, message: subtitle, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default)
         alert.addAction(action)
-        viewController?.present(alert, animated: true)
+        DispatchQueue.main.async { viewController?.present(alert, animated: true) }
     }
 }
