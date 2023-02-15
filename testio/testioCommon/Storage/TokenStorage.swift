@@ -1,6 +1,6 @@
 public protocol TokenStoring {
     func save(token: String) throws
-    func read() throws -> String?
+    func read() -> String?
     func delete() throws
 }
 
@@ -23,9 +23,12 @@ public final class TokenStorage: TokenStoring {
         try keychainStorage.save(data: tokenData, service: Constants.serviceKey, account: Constants.accountKey)
     }
 
-    public func read() throws -> String? {
-        guard let tokenData = try keychainStorage.read(service: Constants.serviceKey, account: Constants.accountKey) else { return nil }
-        return String(data: tokenData, encoding: .utf8)
+    public func read() -> String? {
+        do {
+            let tokenData = try keychainStorage.read(service: Constants.serviceKey, account: Constants.accountKey)
+            guard let tokenData = tokenData else { return nil }
+            return String(data: tokenData, encoding: .utf8)
+        } catch { return nil }
     }
 
     public func delete() throws {

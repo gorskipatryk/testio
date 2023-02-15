@@ -2,7 +2,7 @@ import testioCommon
 import UIKit
 
 public protocol LoginFactoring {
-    func makeLoginScreen() -> UIViewController
+    func makeLoginScreen(with router: LoginRouting) -> UIViewController
 }
 
 public final class LoginFactory: LoginFactoring {
@@ -12,10 +12,9 @@ public final class LoginFactory: LoginFactoring {
 
     // MARK: - LoginFactoring
 
-    public func makeLoginScreen() -> UIViewController {
+    public func makeLoginScreen(with router: LoginRouting) -> UIViewController {
         let apiClient = APIClient()
         let loginService = LoginService(apiClient: apiClient)
-        let router = LoginRouter()
         let presenter = LoginPresenter(router: router)
         let interactor = LoginInteractor(presenter: presenter, loginService: loginService)
         let viewController = LoginViewController(interactor: interactor)

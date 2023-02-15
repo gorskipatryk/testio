@@ -2,6 +2,7 @@ import testioCommon
 
 protocol LoginPresenting {
     func presentAlert(title: String, subtitle: String?)
+    func presentServerList()
 }
 
 final class LoginPresenter: LoginPresenting {
@@ -22,8 +23,12 @@ final class LoginPresenter: LoginPresenting {
         alertPresenter.present(title: title, subtitle: subtitle, on: viewController)
     }
 
+    func presentServerList() {
+        router?.navigateToServerList()
+    }
+
     // MARK: - Private
 
-    private let router: LoginRouting
+    private weak var router: LoginRouting?
     private let alertPresenter: AlertPresenting
 }

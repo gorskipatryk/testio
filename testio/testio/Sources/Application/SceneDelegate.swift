@@ -3,17 +3,16 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
-    let entryPointDecider: EntryPointDeciding
+    let mainRouter: MainRouterProtocol
 
     override init() {
-        self.entryPointDecider = EntryPointDecider(loginFactory: LoginFactory())
+        self.mainRouter = MainRouter()
     }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        let viewController = entryPointDecider.entryPoint()
-        window.rootViewController = viewController
+        mainRouter.presentInitialViewController(in: window)
         window.makeKeyAndVisible()
         self.window = window
     }

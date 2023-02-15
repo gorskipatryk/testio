@@ -25,12 +25,11 @@
 		D0EF65CC299AA20400AD7E41 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF65CB299AA20400AD7E41 /* LoginView.swift */; };
 		D0EF65CE299AA21C00AD7E41 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF65CD299AA21C00AD7E41 /* LoginInteractor.swift */; };
 		D0EF65D0299AA22300AD7E41 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF65CF299AA22300AD7E41 /* LoginPresenter.swift */; };
-		D0EF65D2299AA22900AD7E41 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF65D1299AA22900AD7E41 /* LoginRouter.swift */; };
+		D0EF65D2299AA22900AD7E41 /* LoginRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF65D1299AA22900AD7E41 /* LoginRouting.swift */; };
 		D0EF65D4299AA2CF00AD7E41 /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF65D3299AA2CF00AD7E41 /* LoginFactory.swift */; };
 		D0EF65D6299AA44700AD7E41 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF65D5299AA44700AD7E41 /* LoginViewController.swift */; };
 		D0EF67E4299AA6F300AD7E41 /* HasCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF67E3299AA6F300AD7E41 /* HasCustomView.swift */; };
 		D0EF67E6299AA6FD00AD7E41 /* testioCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EF6588299A9DC000AD7E41 /* testioCommon.framework */; };
-		D0EF67EE299AA89E00AD7E41 /* EntryPointDecider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF67ED299AA89E00AD7E41 /* EntryPointDecider.swift */; };
 		D0EF67F2299AC4B300AD7E41 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF67F1299AC4B300AD7E41 /* LogoView.swift */; };
 		D0EF67F5299AC99A00AD7E41 /* UIColor+Testio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF67F4299AC99A00AD7E41 /* UIColor+Testio.swift */; };
 		D0EF67F7299ACCC500AD7E41 /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF67F6299ACCC500AD7E41 /* UIView+CornerRadius.swift */; };
@@ -51,6 +50,8 @@
 		D0EF6824299C24C400AD7E41 /* TokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6823299C24C400AD7E41 /* TokenStorage.swift */; };
 		D0EF6827299C253700AD7E41 /* KeychainData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6826299C253700AD7E41 /* KeychainData.swift */; };
 		D0EF6829299C293200AD7E41 /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6828299C293200AD7E41 /* KeychainError.swift */; };
+		D0EF682C299D387D00AD7E41 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF682B299D387D00AD7E41 /* MainRouter.swift */; };
+		D0EF682E299D388400AD7E41 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF682D299D388400AD7E41 /* LoginRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,11 +148,10 @@
 		D0EF65CB299AA20400AD7E41 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D0EF65CD299AA21C00AD7E41 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		D0EF65CF299AA22300AD7E41 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
-		D0EF65D1299AA22900AD7E41 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		D0EF65D1299AA22900AD7E41 /* LoginRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouting.swift; sourceTree = "<group>"; };
 		D0EF65D3299AA2CF00AD7E41 /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
 		D0EF65D5299AA44700AD7E41 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D0EF67E3299AA6F300AD7E41 /* HasCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasCustomView.swift; sourceTree = "<group>"; };
-		D0EF67ED299AA89E00AD7E41 /* EntryPointDecider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPointDecider.swift; sourceTree = "<group>"; };
 		D0EF67F1299AC4B300AD7E41 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		D0EF67F4299AC99A00AD7E41 /* UIColor+Testio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Testio.swift"; sourceTree = "<group>"; };
 		D0EF67F6299ACCC500AD7E41 /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
@@ -172,6 +172,8 @@
 		D0EF6823299C24C400AD7E41 /* TokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStorage.swift; sourceTree = "<group>"; };
 		D0EF6826299C253700AD7E41 /* KeychainData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainData.swift; sourceTree = "<group>"; };
 		D0EF6828299C293200AD7E41 /* KeychainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainError.swift; sourceTree = "<group>"; };
+		D0EF682B299D387D00AD7E41 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		D0EF682D299D388400AD7E41 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -366,7 +368,7 @@
 				D0EF65D3299AA2CF00AD7E41 /* LoginFactory.swift */,
 				D0EF65CD299AA21C00AD7E41 /* LoginInteractor.swift */,
 				D0EF65CF299AA22300AD7E41 /* LoginPresenter.swift */,
-				D0EF65D1299AA22900AD7E41 /* LoginRouter.swift */,
+				D0EF65D1299AA22900AD7E41 /* LoginRouting.swift */,
 				D0EF65CB299AA20400AD7E41 /* LoginView.swift */,
 				D0EF65D5299AA44700AD7E41 /* LoginViewController.swift */,
 			);
@@ -399,18 +401,10 @@
 		D0EF67EB299AA88100AD7E41 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				D0EF67EC299AA89100AD7E41 /* EntryPoint */,
+				D0EF682A299D386900AD7E41 /* Routing */,
 				D0EF6582299A9ACB00AD7E41 /* Application */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		D0EF67EC299AA89100AD7E41 /* EntryPoint */ = {
-			isa = PBXGroup;
-			children = (
-				D0EF67ED299AA89E00AD7E41 /* EntryPointDecider.swift */,
-			);
-			path = EntryPoint;
 			sourceTree = "<group>";
 		};
 		D0EF67EF299AC4A100AD7E41 /* Components */ = {
@@ -537,6 +531,15 @@
 				D0EF6828299C293200AD7E41 /* KeychainError.swift */,
 			);
 			path = Keychain;
+			sourceTree = "<group>";
+		};
+		D0EF682A299D386900AD7E41 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF682B299D387D00AD7E41 /* MainRouter.swift */,
+				D0EF682D299D388400AD7E41 /* LoginRouter.swift */,
+			);
+			path = Routing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -784,8 +787,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0EF67EE299AA89E00AD7E41 /* EntryPointDecider.swift in Sources */,
+				D0EF682C299D387D00AD7E41 /* MainRouter.swift in Sources */,
 				D0EF6552299A976200AD7E41 /* AppDelegate.swift in Sources */,
+				D0EF682E299D388400AD7E41 /* LoginRouter.swift in Sources */,
 				D0EF6554299A976200AD7E41 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -840,7 +844,7 @@
 				D0EF65D6299AA44700AD7E41 /* LoginViewController.swift in Sources */,
 				D0EF65D0299AA22300AD7E41 /* LoginPresenter.swift in Sources */,
 				D0EF65CE299AA21C00AD7E41 /* LoginInteractor.swift in Sources */,
-				D0EF65D2299AA22900AD7E41 /* LoginRouter.swift in Sources */,
+				D0EF65D2299AA22900AD7E41 /* LoginRouting.swift in Sources */,
 				D0EF65CC299AA20400AD7E41 /* LoginView.swift in Sources */,
 				D0EF65D4299AA2CF00AD7E41 /* LoginFactory.swift in Sources */,
 				D0EF680D299BDE2400AD7E41 /* LoginService.swift in Sources */,
