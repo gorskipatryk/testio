@@ -20,7 +20,6 @@ final class MainRouter: MainRouterProtocol {
     // MARK: - MainRouterProtocol
 
     func presentInitialViewController(in window: UIWindow) {
-        removeApiToken()
         if let token = tokenStorage.read(), !token.isEmpty {
             let loginViewController = loginRouter.initialViewController()
             let serverBrowserViewController = serverBrowserRouter.initialViewController()
@@ -38,11 +37,4 @@ final class MainRouter: MainRouterProtocol {
     private let loginRouter: LoginRouting
     private let serverBrowserRouter: ServerBrowserRouting
     private let navigationController: UINavigationController
-
-    // TODO: - Remove
-    func removeApiToken() {
-        do {
-            try tokenStorage.delete()
-        } catch { }
-    }
 }

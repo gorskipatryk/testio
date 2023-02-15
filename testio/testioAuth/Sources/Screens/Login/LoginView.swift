@@ -34,6 +34,7 @@ final class LoginView: UIView {
         textField.backgroundColor = .Testio.textFieldBackgroundColor
         textField.cornerRadius(Constants.cornerRadius)
         textField.placeholder = "Username"
+        textField.autocapitalizationType = .none
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -44,6 +45,7 @@ final class LoginView: UIView {
         textField.isSecureTextEntry = true
         textField.cornerRadius(Constants.cornerRadius)
         textField.placeholder = "Password"
+        textField.autocapitalizationType = .none
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
