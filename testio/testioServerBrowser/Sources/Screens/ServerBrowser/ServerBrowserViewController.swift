@@ -63,6 +63,7 @@ final class ServerBrowserViewController: UIViewController, HasCustomView, Server
 
     private func setUpTableView() {
         castView.tableView.dataSource = self
+        castView.tableView.delegate = self
     }
 }
 
@@ -80,5 +81,11 @@ extension ServerBrowserViewController: UITableViewDataSource {
         cell.nameLabel.text = servers[indexPath.row].name
         cell.distanceLabel.text = "\(servers[indexPath.row].distance) km"
         return cell
+    }
+}
+
+extension ServerBrowserViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        TableViewHeaderView()
     }
 }

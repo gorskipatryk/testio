@@ -10,6 +10,7 @@ final class ServerBrowserView: UIView {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.rowHeight = Constants.rowHeight
+        tableView.sectionHeaderTopPadding = 0
         tableView.register(ServerCell.self, forCellReuseIdentifier: String(describing: ServerCell.self))
         return tableView
     }()

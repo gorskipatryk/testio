@@ -73,6 +73,7 @@
 		D0EF6880299D738100AD7E41 /* LoginRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF687A299D72E700AD7E41 /* LoginRouterSpy.swift */; };
 		D0EF6881299D738900AD7E41 /* LoginPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6876299D72B400AD7E41 /* LoginPresenterSpec.swift */; };
 		D0EF6882299D750300AD7E41 /* AlertPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF687C299D72EF00AD7E41 /* AlertPresenterSpy.swift */; };
+		D0EF6884299D781900AD7E41 /* TableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF6883299D781900AD7E41 /* TableViewHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -252,6 +253,7 @@
 		D0EF6876299D72B400AD7E41 /* LoginPresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterSpec.swift; sourceTree = "<group>"; };
 		D0EF687A299D72E700AD7E41 /* LoginRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouterSpy.swift; sourceTree = "<group>"; };
 		D0EF687C299D72EF00AD7E41 /* AlertPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenterSpy.swift; sourceTree = "<group>"; };
+		D0EF6883299D781900AD7E41 /* TableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -521,6 +523,7 @@
 			children = (
 				D0EF67F1299AC4B300AD7E41 /* LogoView.swift */,
 				D0EF67FA299AD39B00AD7E41 /* IconTextField.swift */,
+				D0EF6883299D781900AD7E41 /* TableViewHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1129,6 +1132,7 @@
 				D0EF6820299C243C00AD7E41 /* Keychain.swift in Sources */,
 				D0EF6824299C24C400AD7E41 /* TokenStorage.swift in Sources */,
 				D0EF6872299D6AF000AD7E41 /* Server.swift in Sources */,
+				D0EF6884299D781900AD7E41 /* TableViewHeaderView.swift in Sources */,
 				D0EF681D299BFF4900AD7E41 /* AlertPresenter.swift in Sources */,
 				D0EF67F7299ACCC500AD7E41 /* UIView+CornerRadius.swift in Sources */,
 				D0EF67FB299AD39B00AD7E41 /* IconTextField.swift in Sources */,
