@@ -6,6 +6,7 @@ final class ServerCell: UITableViewCell {
         static let distanceLabelRightPadding: CGFloat = 26
         static let labelsSpacing: CGFloat = 10
     }
+
     // MARK: - Subviews
 
     let nameLabel: UILabel = {

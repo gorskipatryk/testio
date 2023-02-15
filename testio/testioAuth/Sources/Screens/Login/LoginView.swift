@@ -16,14 +16,14 @@ final class LoginView: UIView {
 
     // MARK: - Subviews
 
-    let backgroundImageView: UIImageView = {
+    private let backgroundImageView: UIImageView = {
         let image = UIImage(named: Constants.backgroundImageName)
         let imageView = UIImageView(image: image)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
 
-    let logoView: LogoView = {
+    private let logoView: LogoView = {
         let logoView = LogoView()
         logoView.translatesAutoresizingMaskIntoConstraints = false
         return logoView
@@ -50,7 +50,7 @@ final class LoginView: UIView {
         return textField
     }()
 
-    let textFieldsStackView: UIStackView = {
+    private let textFieldsStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = Constants.textFieldsStackViewSpacing

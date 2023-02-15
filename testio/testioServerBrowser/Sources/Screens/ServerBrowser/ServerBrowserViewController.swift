@@ -84,6 +84,8 @@ extension ServerBrowserViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
+
 extension ServerBrowserViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         TableViewHeaderView()
