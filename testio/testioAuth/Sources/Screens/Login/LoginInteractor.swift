@@ -1,7 +1,7 @@
 import testioCommon
 
 protocol LoginInteracting {
-    func initialize()
+    func loginButtonDidTap(username: String?, password: String?)
 }
 
 final class LoginInteractor: LoginInteracting {
@@ -14,23 +14,28 @@ final class LoginInteractor: LoginInteracting {
 
     // MARK: - LoginInteracting
 
-    func initialize() {
-        Task {
-            do { try await loginService.logIn(username: "test", password: "test") }
-            catch let error as KeychainError {
-                DispatchQueue.main.async {
-                    self.presenter.presentAlert(title: error.localizedDescription, subtitle: error.failureReason)
-                }
-            } catch let error as NetworkError {
-                DispatchQueue.main.async {
-                    self.presenter.presentAlert(title: error.localizedDescription, subtitle: error.failureReason)
-                }
-            }
+    func loginButtonDidTap(username: String?, password: String?) {
+        guard let username = username, let password = password, !username.isEmpty, !password.isEmpty else {
+            presenter.presentAlert(title: "Wrong credentials", subtitle: "Username or password is empty!")
+            return
         }
+        performLogin(username: username, password: password)
     }
 
     // MARK: - Private
 
     private let presenter: LoginPresenting
     private let loginService: LoginServiceProtocol
+
+    private func performLogin(username: String, password: String) {
+        Task {
+            do {
+                try await loginService.logIn(username: username, password: password)
+            } catch let error as NetworkError {
+                DispatchQueue.main.async {
+                    self.presenter.presentAlert(title: error.errorTitle, subtitle: error.failureReason)
+                }
+            }
+        }
+    }
 }

@@ -4,7 +4,7 @@ public protocol HasCustomView {
     associatedtype MainView: UIView
 }
 
-extension HasCustomView where Self: UIViewController {
+public extension HasCustomView where Self: UIViewController {
     var castView: MainView {
         guard let castView = view as? MainView else {
             fatalError("Expected \(MainView.self), got \(type(of: view.self)) instead")

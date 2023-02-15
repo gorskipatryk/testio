@@ -22,10 +22,19 @@ final class LoginViewController: UIViewController, HasCustomView, LoginViewContr
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        interactor.initialize()
+        setUpLoginButtonAction()
     }
 
     // MARK: - Private
 
     private let interactor: LoginInteracting
+
+    private func setUpLoginButtonAction() {
+        let buttonAction = UIAction { [weak self] _ in
+            self?.castView.endEditing(true)
+            self?.interactor.loginButtonDidTap(username: self?.castView.usernameTextField.text,
+                                               password: self?.castView.passwordTextField.text)
+        }
+        castView.loginButton.addAction(buttonAction, for: .touchUpInside)
+    }
 }

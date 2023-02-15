@@ -1,7 +1,7 @@
 public enum NetworkError: LocalizedError {
     case invalidUrl, invalidResponse, notFound, unauthorized, serverError, unknown
 
-    public var errorDescription: String {
+    public var errorTitle: String {
         switch self {
         case .invalidUrl:
             return "Invalid URL"

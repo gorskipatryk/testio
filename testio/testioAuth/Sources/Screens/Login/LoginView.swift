@@ -29,7 +29,7 @@ final class LoginView: UIView {
         return logoView
     }()
 
-    let loginTextField: IconTextField = {
+    let usernameTextField: IconTextField = {
         let textField = IconTextField(imageName: "username")
         textField.backgroundColor = .Testio.textFieldBackgroundColor
         textField.cornerRadius(Constants.cornerRadius)
@@ -82,7 +82,7 @@ final class LoginView: UIView {
         backgroundColor = .white
         addSubview(backgroundImageView)
         addSubview(logoView)
-        textFieldsStackView.addArrangedSubview(loginTextField)
+        textFieldsStackView.addArrangedSubview(usernameTextField)
         textFieldsStackView.addArrangedSubview(passwordTextField)
         addSubview(textFieldsStackView)
         addSubview(loginButton)
@@ -101,7 +101,7 @@ final class LoginView: UIView {
         ])
 
         NSLayoutConstraint.activate([
-            loginTextField.heightAnchor.constraint(equalToConstant: Constants.textFieldHeight)
+            usernameTextField.heightAnchor.constraint(equalToConstant: Constants.textFieldHeight)
         ])
 
         NSLayoutConstraint.activate([
