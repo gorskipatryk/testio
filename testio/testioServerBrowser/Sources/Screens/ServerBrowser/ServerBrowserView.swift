@@ -14,6 +14,13 @@ final class ServerBrowserView: UIView {
         return tableView
     }()
 
+    let activityIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView()
+        activityIndicator.startAnimating()
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        return activityIndicator
+    }()
+
     // MARK: - Initialization
 
     init() {
@@ -26,6 +33,7 @@ final class ServerBrowserView: UIView {
 
     private func setUpLayout() {
         addSubview(tableView)
+        addSubview(activityIndicator)
     }
 
     private func setUpConstraints() {
@@ -34,6 +42,11 @@ final class ServerBrowserView: UIView {
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+
+        NSLayoutConstraint.activate([
+            activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor),
+            activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
     }
 }

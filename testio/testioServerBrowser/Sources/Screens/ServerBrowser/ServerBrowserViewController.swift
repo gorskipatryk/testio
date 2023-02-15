@@ -3,6 +3,7 @@ import UIKit
 
 protocol ServerBrowserViewControllerProtocol: UIViewController {
     func present(servers: [Server])
+    func stopActivityIndicator()
 }
 
 final class ServerBrowserViewController: UIViewController, HasCustomView, ServerBrowserViewControllerProtocol {
@@ -28,6 +29,10 @@ final class ServerBrowserViewController: UIViewController, HasCustomView, Server
     }
 
     // MARK: - ServerBrowserViewControllerProtocol
+
+    func stopActivityIndicator() {
+        castView.activityIndicator.stopAnimating()
+    }
 
     func present(servers: [Server]) {
         self.servers = servers
@@ -61,6 +66,8 @@ final class ServerBrowserViewController: UIViewController, HasCustomView, Server
     }
 }
 
+// MARK: - UITableViewDataSource
+
 extension ServerBrowserViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         servers.count
@@ -71,7 +78,7 @@ extension ServerBrowserViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         cell.nameLabel.text = servers[indexPath.row].name
-        cell.distanceLabel.text = "\(servers[indexPath.row].distance)"
+        cell.distanceLabel.text = "\(servers[indexPath.row].distance) km"
         return cell
     }
 }

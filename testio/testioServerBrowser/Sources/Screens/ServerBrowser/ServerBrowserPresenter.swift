@@ -21,10 +21,12 @@ final class ServerBrowserPresenter: ServerBrowserPresenting {
     // MARK: - ServerBrowserPresenting
 
     func present(servers: [Server]) {
+        viewController?.stopActivityIndicator()
         viewController?.present(servers: servers)
     }
 
     func presentAlert(title: String, subtitle: String?) {
+        viewController?.stopActivityIndicator()
         alertPresenter.present(title: title, subtitle: subtitle, on: viewController)
     }
 
