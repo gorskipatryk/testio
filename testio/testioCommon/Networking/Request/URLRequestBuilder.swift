@@ -5,7 +5,9 @@ public protocol URLRequestBuilding {
 public final class URLRequestBuilder: URLRequestBuilding {
     // MARK: - Initialization
 
-    public init() { }
+    public init(tokenStorage: TokenStoring = TokenStorage()) {
+        self.tokenStorage = tokenStorage
+    }
 
     // MARK: - URLRequestBuilding
 
@@ -23,6 +25,14 @@ public final class URLRequestBuilder: URLRequestBuilding {
         var request = URLRequest(url: url)
         request.httpMethod = apiRequest.requestMethod.rawValue
 
+        if apiRequest.requiresAuthorization, let token = tokenStorage.read() {
+            request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        }
+
         return request
     }
+
+    // MARK: - Private
+
+    private let tokenStorage: TokenStoring
 }

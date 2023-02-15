@@ -12,6 +12,8 @@ final class LoginService: LoginServiceProtocol {
         self.tokenStorage = tokenStorage
     }
 
+    // MARK: - LoginServiceProtocol
+
     func logIn(username: String, password: String) async throws {
         let request = LoginRequest(username: username, password: password)
         let responseData: APIToken = try await apiClient.perform(request: request)

@@ -1,7 +1,9 @@
 import testioCommon
 import UIKit
 
-protocol ServerBrowserViewControllerProtocol: UIViewController { }
+protocol ServerBrowserViewControllerProtocol: UIViewController {
+    func present(servers: [Server])
+}
 
 final class ServerBrowserViewController: UIViewController, HasCustomView, ServerBrowserViewControllerProtocol {
     typealias MainView = ServerBrowserView
@@ -20,6 +22,27 @@ final class ServerBrowserViewController: UIViewController, HasCustomView, Server
     }
 
     override func viewDidLoad() {
+        interactor.initialize()
+        setUpNavigationBar()
+        setUpTableView()
+    }
+
+    // MARK: - ServerBrowserViewControllerProtocol
+
+    func present(servers: [Server]) {
+        self.servers = servers
+    }
+
+    // MARK: - Private
+
+    private let interactor: ServerBrowserInteracting
+    private var servers: [Server] = [] {
+        didSet {
+            castView.tableView.reloadData()
+        }
+    }
+
+    private func setUpNavigationBar() {
         title = "testio"
         let logoutAction = UIAction { [weak self] _ in
             self?.interactor.logoutButtonDidTap()
@@ -33,7 +56,22 @@ final class ServerBrowserViewController: UIViewController, HasCustomView, Server
         navigationItem.setLeftBarButton(filterButton, animated: true)
     }
 
-    // MARK: - Private
+    private func setUpTableView() {
+        castView.tableView.dataSource = self
+    }
+}
 
-    private let interactor: ServerBrowserInteracting
+extension ServerBrowserViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        servers.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ServerCell.self), for: indexPath) as? ServerCell else {
+            return UITableViewCell()
+        }
+        cell.nameLabel.text = servers[indexPath.row].name
+        cell.distanceLabel.text = "\(servers[indexPath.row].distance)"
+        return cell
+    }
 }
