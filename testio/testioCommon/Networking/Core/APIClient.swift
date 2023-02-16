@@ -1,5 +1,5 @@
 public protocol APIClientProtocol {
-    func perform<T: Codable>(request: any APIRequest) async throws -> T
+    func perform<T: Codable>(request: some APIRequest) async throws -> T
 }
 
 public final class APIClient: APIClientProtocol {
@@ -15,7 +15,7 @@ public final class APIClient: APIClientProtocol {
 
     // MARK: - APIClientProtocol
 
-    public func perform<T: Codable>(request: any APIRequest) async throws -> T {
+    public func perform<T: Codable>(request: some APIRequest) async throws -> T {
         let urlRequest = try urlRequestBuilder.build(from: request)
         let (data, response) = try await urlSession.data(for: urlRequest)
         if let error = NetworkError(from: response) { throw error }

@@ -1,5 +1,5 @@
 public protocol URLRequestBuilding {
-    func build(from apiRequest: any APIRequest) throws -> URLRequest
+    func build(from apiRequest: some APIRequest) throws -> URLRequest
 }
 
 public final class URLRequestBuilder: URLRequestBuilding {
@@ -11,7 +11,7 @@ public final class URLRequestBuilder: URLRequestBuilding {
 
     // MARK: - URLRequestBuilding
 
-    public func build(from apiRequest: any APIRequest) throws -> URLRequest {
+    public func build(from apiRequest: some APIRequest) throws -> URLRequest {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = APIConstants.baseURL
