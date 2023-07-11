@@ -15,7 +15,7 @@ final class ServerBrowserService: ServerBrowserServiceProtocol {
 
     func fetchServers() async throws -> [Server] {
         let request = ServerListRequest()
-        let responseData: [Server] = try await apiClient.perform(request: request)
+        let responseData = try await apiClient.perform(request: request)
         return responseData
     }
 
